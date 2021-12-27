@@ -1,13 +1,14 @@
-<img src="logo.png" width="30%" alt="Polylith" id="logo">
+# Issue 174
 
-The Polylith documentation can be found here:
+```bash
+(! 555)-> clojure -M:poly test :dev :all
+Projects to run tests from: development
 
-- The [high-level documentation](https://polylith.gitbook.io/polylith)
-- The [Polylith Tool documentation](https://github.com/polyfy/polylith)
-- The [RealWorld example app documentation](https://github.com/furkan3ayraktar/clojure-polylith-realworld-example-app)
+Couldn't resolve libraries for the development project: java.lang.Exception: Unknown library type:
+```
 
-You can also get in touch with the Polylith Team via our [forum](https://polylith.freeflarum.com) or on [Slack](https://clojurians.slack.com/archives/C013B7MQHJQ).
+Because the following style of git deps does not work:
 
-<h1>gitdeps</h1>
-
-<p>Add your workspace documentation here...</p>
+```clojure
+io.github.seancorfield/deps-new {:git/sha "12510ba7ad0d0e00bef16666b92db340adeadcf1"}
+```
